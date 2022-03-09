@@ -2,13 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
-import Index from './pages';
+import Index from './pages/Index';
+import SignUp from './pages/SignUp';
+import ProfileCreation from './pages/ProfileCreation';
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Index />} />
+        <Route exact path="/" element={<Index />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/profile-creation" element={<ProfileCreation />} />
         <Route element={<div>404</div>} />
       </Routes>
     </BrowserRouter>
