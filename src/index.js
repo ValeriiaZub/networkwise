@@ -5,17 +5,49 @@ import reportWebVitals from './reportWebVitals';
 import Index from './pages/Index';
 import SignUp from './pages/SignUp';
 import ProfileCreation from './pages/ProfileCreation';
+import ReadexPro from './assets/fonts/Readex_Pro/ReadexPro-VariableFont_wght.ttf'
+import { CssBaseline, ThemeProvider, createTheme } from '@mui/material';
+
+const theme = createTheme({
+  typography: {
+    fontFamily: 'Readex Pro'
+  },
+  palette: {
+    primary: {
+      light: '#464dc9',
+      main: '#1821BC',
+      dark: '#101783',
+      contrastText: '#fff',
+    },
+  },
+  components: {
+    MuiCssBaseline: {
+      styleOverrides: `
+        @font-face {
+          font-family: 'Readex Pro';
+          font-style: normal;
+          font-display: swap;
+          font-weight: 400;
+          src; local('Readex Pro'), url(${ReadexPro}) format('ttf');
+        }
+      `
+    }
+  }
+})
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route exact path="/" element={<Index />} />
-        <Route path="/signup" element={<SignUp />} />
-        <Route path="/profile-creation" element={<ProfileCreation />} />
-        <Route element={<div>404</div>} />
-      </Routes>
-    </BrowserRouter>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <BrowserRouter>
+        <Routes>
+          <Route exact path="/" element={<Index />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/profile-creation" element={<ProfileCreation />} />
+          <Route element={<div>404</div>} />
+        </Routes>
+      </BrowserRouter>
+    </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
