@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
 import Index from './pages/Index';
 import SignUp from './pages/SignUp';
+import PreOnboard from './pages/PreOnboard'
 import ProfileCreation from './pages/ProfileCreation';
 import ReadexPro from './assets/fonts/Readex_Pro/ReadexPro-VariableFont_wght.ttf'
 import { CssBaseline, ThemeProvider, createTheme } from '@mui/material';
@@ -43,6 +44,7 @@ ReactDOM.render(
         <Routes>
           <Route exact path="/" element={<Index />} />
           <Route path="/signup" element={<SignUp />} />
+          <Route path="/pre-onboard" element={<PreOnboard />} />
           <Route path="/profile-creation" element={<ProfileCreation />} />
           <Route element={<div>404</div>} />
         </Routes>

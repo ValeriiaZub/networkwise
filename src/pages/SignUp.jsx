@@ -32,7 +32,7 @@ const SignUp = () => {
             password: event.target[6].value,
         }
         console.log(user)
-        navigate("/profile-creation");
+        navigate("/pre-onboard");
     }
 
     return <Box sx={{ padding: '38px', height: '80%', width: '100%' }}>
