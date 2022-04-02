@@ -6,6 +6,7 @@ import Index from './pages/Index';
 import SignUp from './pages/SignUp';
 import PreOnboard from './pages/PreOnboard'
 import ProfileCreation from './pages/ProfileCreation';
+import App from './pages/App';
 import ReadexPro from './assets/fonts/Readex_Pro/ReadexPro-VariableFont_wght.ttf'
 import { CssBaseline, ThemeProvider, createTheme } from '@mui/material';
 
@@ -19,6 +20,7 @@ const theme = createTheme({
       main: '#1821BC',
       dark: '#101783',
       contrastText: '#fff',
+      gray: '#000000BC'
     },
   },
   components: {
@@ -46,6 +48,7 @@ ReactDOM.render(
           <Route path="/signup" element={<SignUp />} />
           <Route path="/pre-onboard" element={<PreOnboard />} />
           <Route path="/profile-creation" element={<ProfileCreation />} />
+          <Route path="/app" element={<App />} />
           <Route element={<div>404</div>} />
         </Routes>
       </BrowserRouter>
