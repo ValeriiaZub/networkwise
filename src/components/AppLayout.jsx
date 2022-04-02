@@ -5,7 +5,7 @@ import { faMessage, faUsers, faLightbulb, faCircleUser } from '@fortawesome/free
 
 
 const AppContainer = styled('div')({
-    padding: '32px',
+    padding: ' 16px 32px',
     width: '100%'
 })
 
