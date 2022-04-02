@@ -55,7 +55,7 @@ ReactDOM.render(
             <Route element={<div>Not implemented yet</div>} path="messages/:id" />
             <Route element={<div>Not implemented yet</div>} path="play" />
             <Route element={<div>Not implemented yet</div>} path="profile" />
-            <Route element={<App />} path="*" />
+            <Route element={<App />} path="/app" />
           </Route>
           <Route element={<div>404</div>} />
         </Routes>

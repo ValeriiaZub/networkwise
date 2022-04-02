@@ -1,10 +1,10 @@
-import { Link, useLocation } from "react-router-dom"
+import { Link, useLocation, Outlet } from "react-router-dom"
 import { Box, styled, Typography } from "@mui/material"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMessage, faUsers, faLightbulb, faCircleUser } from '@fortawesome/free-solid-svg-icons'
 
 
-export const AppContainer = styled('div')({
+const AppContainer = styled('div')({
     padding: '32px',
     width: '100%'
 })
@@ -62,6 +62,9 @@ const AppLayout = () => {
                 </Item>
             </Link>
         </Flex>
+        <AppContainer>
+            <Outlet />
+        </AppContainer>
     </>
 }
 
