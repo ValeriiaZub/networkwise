@@ -1,6 +1,7 @@
+
+
 import { Box, Typography, styled } from "@mui/material"
 import Card from '../components/Card'
-import Search from '../assets/images/matches/search.png'
 
 const List = styled('div')({
     display: 'grid',
@@ -9,29 +10,30 @@ const List = styled('div')({
     padding: '16px 0px 32px 0px'
 })
 
-const Matches = () => {
+const Find = () => {
+
     return <>
         <Box sx={{ paddingTop: '4px' }}>
             <Typography color="primary.gray">
-                You have{' '}
                 <Box component='span' color="primary.main">
-                    1 match
+                    8
                 </Box>
+                {' '}professionals match your settings
             </Typography>
         </Box>
         <List>
             <Card
-                title="Fiona, Lead designer @ABC"
-                description="Just added inclusive design as a new skill. Fiona and you have the same hobbies."
+                title="Work @ABC"
+                description="3 designers who worked at the same company and have similar hobbies"
+                tags={["mutual interests"]}
+            />
+            <Card
+                title="Educated @SheridanCollege"
+                description="5 designers who have similar education"
+                tags={["Sheridan College"]}
             />
         </List>
-        <Box>
-            <img src={Search} alt="man with hand up" />
-            <Typography>
-                Search for more professionals to see more matches
-            </Typography>
-        </Box>
     </>
 }
 
-export default Matches
+export default Find
