@@ -9,6 +9,14 @@ const List = styled('div')({
     padding: '16px 0px 32px 0px'
 })
 
+const Flex = styled('div')({
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexDirection: 'column',
+    textAlign: 'center'
+})
+
 const Matches = () => {
     return <>
         <Box sx={{ paddingTop: '4px' }}>
@@ -25,12 +33,12 @@ const Matches = () => {
                 description="Just added inclusive design as a new skill. Fiona and you have the same hobbies."
             />
         </List>
-        <Box>
-            <img src={Search} alt="man with hand up" />
-            <Typography>
+        <Flex>
+            <img height="250" width="200" src={Search} alt="man with hand up" />
+            <Typography padding={1} color="primary.gray">
                 Search for more professionals to see more matches
             </Typography>
-        </Box>
+        </Flex>
     </>
 }
 

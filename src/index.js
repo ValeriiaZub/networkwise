@@ -11,6 +11,7 @@ import AppLayout from './components/AppLayout'
 import ReadexPro from './assets/fonts/Readex_Pro/ReadexPro-VariableFont_wght.ttf'
 import { CssBaseline, ThemeProvider, createTheme } from '@mui/material';
 import './base.css'
+import Profile from './pages/Profile';
 
 const theme = createTheme({
   typography: {
@@ -54,7 +55,7 @@ ReactDOM.render(
             <Route element={<div>Not implemented yet</div>} path="messages" />
             <Route element={<div>Not implemented yet</div>} path="messages/:id" />
             <Route element={<div>Not implemented yet</div>} path="play" />
-            <Route element={<div>Not implemented yet</div>} path="profile" />
+            <Route element={<Profile />} path="profile" />
             <Route element={<App />} path="/app" />
           </Route>
           <Route element={<div>404</div>} />
