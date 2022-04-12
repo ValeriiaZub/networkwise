@@ -2,8 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
+import Play from './pages/Play';
 import Index from './pages/Index';
 import SignUp from './pages/SignUp';
+import Profile from './pages/Profile';
 import PreOnboard from './pages/PreOnboard'
 import ProfileCreation from './pages/ProfileCreation';
 import App from './pages/App';
@@ -11,7 +13,6 @@ import AppLayout from './components/AppLayout'
 import ReadexPro from './assets/fonts/Readex_Pro/ReadexPro-VariableFont_wght.ttf'
 import { CssBaseline, ThemeProvider, createTheme } from '@mui/material';
 import './base.css'
-import Profile from './pages/Profile';
 
 const theme = createTheme({
   typography: {
@@ -54,7 +55,7 @@ ReactDOM.render(
           <Route path="/app" element={<AppLayout />}>
             <Route element={<div>Not implemented yet</div>} path="messages" />
             <Route element={<div>Not implemented yet</div>} path="messages/:id" />
-            <Route element={<div>Not implemented yet</div>} path="play" />
+            <Route element={<Play />} path="play" />
             <Route element={<Profile />} path="profile" />
             <Route element={<App />} path="/app" />
           </Route>
